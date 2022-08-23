@@ -1,0 +1,486 @@
+{% extends "base.html" %}
+
+{% block title %}
+    whitepapers
+{% endblock title %}
+
+
+{% block content %}
+
+
+       <!--====== Projects Section Start ======-->
+        <section class="projects-section pt-160 rpt-100 pb-130 rpb-70">
+            <div class="container">
+                <!-- <ul class="project-filter mb-55">
+                    <li data-filter="*" class="current">Show All</li>
+                    <li data-filter=".design">Design</li>
+                    <li data-filter=".branding">Branding</li>
+                    <li data-filter=".web">Web</li>
+                    <li data-filter=".development">Development</li>
+                    <li data-filter=".saas">Saas</li>
+                    <li data-filter=".template">Template</li>
+                </ul> -->
+                <div class="row project-active">
+
+<!--one card start-->
+<!--                    to be replicated-->
+                   <div class="col-xl-4 col-lg-6 item branding development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project1.jpg" alt="Project">
+                           <div class="project-content">
+                               <a data-toggle="modal" data-target="#exampleModal" href="#"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a  data-toggle="modal" data-target="#exampleModal" href="#">
+                                  Launch demo1 <br> modal
+                                </a></h3>
+                           </div>
+                       </div>
+                   </div>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <form id="formid1" class="whitepaper" >
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="firstname">First Name</label>
+                              <input type="text" class="form-control" id="firstname" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" class="form-control" id="lastname" required="">
+                            </div>
+                          </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="email" required="">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="company">Company</label>
+                              <input type="text" class="form-control" id="company" required="">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="jobtitle">JobTitle</label>
+                                <input type="text" class="form-control" id="jobtitle" required="">
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class=" col-md-6" >
+                                <label for="Country">Country</label>
+                                <select id="Country" class=" " style="">
+                                    <option value="">Please select...</option>
+                                    <option data-value="United States">United States</option>
+                                    <option data-value="Australia">Australia</option>
+                                    <option data-value="Canada">Canada</option>
+                                    <option data-value="Japan">Japan</option>
+                                    <option data-value="Afghanistan">Afghanistan</option>
+                                    <option data-value="Åland Islands">Åland Islands</option>
+                                    <option data-value="Albania">Albania</option>
+                                    <option data-value="Algeria">Algeria</option>
+                                    <option data-value="American Samoa">American Samoa</option>
+                                    <option data-value="Andorra">Andorra</option>
+                                    <option data-value="Angola">Angola</option>
+                                    <option data-value="Anguilla">Anguilla</option>
+                                    <option data-value="Antarctica">Antarctica</option>
+                                    <option data-value="Antigua and Barbuda">Antigua and Barbuda</option>
+                                    <option data-value="Argentina">Argentina</option>
+                                    <option data-value="Armenia">Armenia</option>
+                                    <option data-value="Aruba">Aruba</option>
+                                    <option data-value="Austria">Austria</option>
+                                    <option data-value="Azerbaijan">Azerbaijan</option>
+                                    <option data-value="Bahrain">Bahrain</option>
+                                    <option data-value="Bahamas">Bahamas</option>
+                                    <option data-value="Bangladesh">Bangladesh</option>
+                                    <option data-value="Barbados">Barbados</option>
+                                    <option data-value="Belarus">Belarus</option>
+                                    <option data-value="Belgium">Belgium</option>
+                                    <option data-value="Belize">Belize</option>
+                                    <option data-value="Benin">Benin</option>
+                                    <option data-value="Bermuda">Bermuda</option>
+                                    <option data-value="Bhutan">Bhutan</option>
+                                    <option data-value="Bolivia, Plurinational State of">Bolivia, Plurinational State of</option>
+                                    <option data-value="Bonaire, Sint Eustatius and Saba">Bonaire, Sint Eustatius and Saba</option>
+                                    <option data-value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+                                    <option data-value="Botswana">Botswana</option>
+                                    <option data-value="Bouvet Island">Bouvet Island</option>
+                                    <option data-value="Brazil">Brazil</option>
+                                    <option data-value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+                                    <option data-value="Brunei Darussalam">Brunei Darussalam</option>
+                                    <option data-value="Bulgaria">Bulgaria</option>
+                                    <option data-value="Burkina Faso">Burkina Faso</option>
+                                    <option data-value="Burundi">Burundi</option>
+                                    <option data-value="Cambodia">Cambodia</option>
+                                    <option data-value="Cameroon">Cameroon</option>
+                                    <option data-value="Cape Verde">Cape Verde</option>
+                                    <option data-value="Cayman Islands">Cayman Islands</option>
+                                    <option data-value="Central African Republic">Central African Republic</option>
+                                    <option data-value="Chad">Chad</option>
+                                    <option data-value="Chile">Chile</option>
+                                    <option data-value="China">China</option>
+                                    <option data-value="Christmas Island">Christmas Island</option>
+                                    <option data-value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+                                    <option data-value="Colombia">Colombia</option>
+                                    <option data-value="Comoros">Comoros</option>
+                                    <option data-value="Congo">Congo</option>
+                                    <option data-value="Congo, the Democratic Republic of the">Congo, the Democratic Republic of the</option>
+                                    <option data-value="Cook Islands">Cook Islands</option>
+                                    <option data-value="Costa Rica">Costa Rica</option>
+                                    <option data-value="Côte d'Ivoire">Côte d'Ivoire</option>
+                                    <option data-value="Croatia">Croatia</option>
+                                    <option data-value="Cuba">Cuba</option>
+                                    <option data-value="Curaçao">Curaçao</option>
+                                    <option data-value="Cyprus">Cyprus</option>
+                                    <option data-value="Czech Republic">Czech Republic</option>
+                                    <option data-value="Denmark">Denmark</option>
+                                    <option data-value="Djibouti">Djibouti</option>
+                                    <option data-value="Dominica">Dominica</option>
+                                    <option data-value="Dominican Republic">Dominican Republic</option>
+                                    <option data-value="Ecuador">Ecuador</option>
+                                    <option data-value="Egypt">Egypt</option>
+                                    <option data-value="El Salvador">El Salvador</option>
+                                    <option data-value="Equatorial Guinea">Equatorial Guinea</option>
+                                    <option data-value="Eritrea">Eritrea</option>
+                                    <option data-value="Estonia">Estonia</option>
+                                    <option data-value="Ethiopia">Ethiopia</option>
+                                    <option data-value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+                                    <option data-value="Faroe Islands">Faroe Islands</option>
+                                    <option data-value="Fiji">Fiji</option>
+                                    <option data-value="Finland">Finland</option>
+                                    <option data-value="France">France</option>
+                                    <option data-value="French Guiana">French Guiana</option>
+                                    <option data-value="French Polynesia">French Polynesia</option>
+                                    <option data-value="French Southern Territories">French Southern Territories</option>
+                                    <option data-value="Gabon">Gabon</option>
+                                    <option data-value="Gambia">Gambia</option>
+                                    <option data-value="Georgia">Georgia</option>
+                                    <option data-value="Germany">Germany</option>
+                                    <option data-value="Ghana">Ghana</option>
+                                    <option data-value="Gibraltar">Gibraltar</option>
+                                    <option data-value="Greece">Greece</option>
+                                    <option data-value="Greenland">Greenland</option>
+                                    <option data-value="Grenada">Grenada</option>
+                                    <option data-value="Guadeloupe">Guadeloupe</option>
+                                    <option data-value="Guam">Guam</option>
+                                    <option data-value="Guatemala">Guatemala</option>
+                                    <option data-value="Guernsey">Guernsey</option>
+                                    <option data-value="Guinea">Guinea</option>
+                                    <option data-value="Guinea-Bissau">Guinea-Bissau</option>
+                                    <option data-value="Guyana">Guyana</option>
+                                    <option data-value="Haiti">Haiti</option>
+                                    <option data-value="Heard Island and McDonald Islands">Heard Island and McDonald Islands</option>
+                                    <option data-value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+                                    <option data-value="Honduras">Honduras</option>
+                                    <option data-value="Hong Kong">Hong Kong</option>
+                                    <option data-value="Hungary">Hungary</option>
+                                    <option data-value="Iceland">Iceland</option>
+                                    <option data-value="India">India</option>
+                                    <option data-value="Indonesia">Indonesia</option>
+                                    <option data-value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+                                    <option data-value="Iraq">Iraq</option>
+                                    <option data-value="Ireland">Ireland</option>
+                                    <option data-value="Isle of Man">Isle of Man</option>
+                                    <option data-value="Israel">Israel</option>
+                                    <option data-value="Italy">Italy</option>
+                                    <option data-value="Jamaica">Jamaica</option>
+                                    <option data-value="Jersey">Jersey</option>
+                                    <option data-value="Jordan">Jordan</option>
+                                    <option data-value="Kazakhstan">Kazakhstan</option>
+                                    <option data-value="Kenya">Kenya</option>
+                                    <option data-value="Kiribati">Kiribati</option>
+                                    <option data-value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+                                    <option data-value="Korea, Republic of">Korea, Republic of</option>
+                                    <option data-value="Kuwait">Kuwait</option>
+                                    <option data-value="Kyrgyzstan">Kyrgyzstan</option>
+                                    <option data-value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+                                    <option data-value="Latvia">Latvia</option>
+                                    <option data-value="Lebanon">Lebanon</option>
+                                    <option data-value="Lesotho">Lesotho</option>
+                                    <option data-value="Liberia">Liberia</option>
+                                    <option data-value="Libya">Libya</option>
+                                    <option data-value="Liechtenstein">Liechtenstein</option>
+                                    <option data-value="Lithuania">Lithuania</option>
+                                    <option data-value="Luxembourg">Luxembourg</option>
+                                    <option data-value="Macao">Macao</option>
+                                    <option data-value="Macedonia, the Former Yugoslav Republic of">Macedonia, the Former Yugoslav Republic of</option>
+                                    <option data-value="Madagascar">Madagascar</option>
+                                    <option data-value="Malawi">Malawi</option>
+                                    <option data-value="Malaysia">Malaysia</option>
+                                    <option data-value="Maldives">Maldives</option>
+                                    <option data-value="Mali">Mali</option>
+                                    <option data-value="Malta">Malta</option>
+                                    <option data-value="Marshall Islands">Marshall Islands</option>
+                                    <option data-value="Martinique">Martinique</option>
+                                    <option data-value="Mauritania">Mauritania</option>
+                                    <option data-value="Mauritius">Mauritius</option>
+                                    <option data-value="Mayotte">Mayotte</option>
+                                    <option data-value="Mexico">Mexico</option>
+                                    <option data-value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+                                    <option data-value="Moldova, Republic of">Moldova, Republic of</option>
+                                    <option data-value="Monaco">Monaco</option>
+                                    <option data-value="Mongolia">Mongolia</option>
+                                    <option data-value="Montenegro">Montenegro</option>
+                                    <option data-value="Montserrat">Montserrat</option>
+                                    <option data-value="Morocco">Morocco</option>
+                                    <option data-value="Mozambique">Mozambique</option>
+                                    <option data-value="Myanmar">Myanmar</option>
+                                    <option data-value="Namibia">Namibia</option>
+                                    <option data-value="Nauru">Nauru</option>
+                                    <option data-value="Nepal">Nepal</option>
+                                    <option data-value="Netherlands">Netherlands</option>
+                                    <option data-value="New Caledonia">New Caledonia</option>
+                                    <option data-value="New Zealand">New Zealand</option>
+                                    <option data-value="Nicaragua">Nicaragua</option>
+                                    <option data-value="Niger">Niger</option>
+                                    <option data-value="Nigeria">Nigeria</option>
+                                    <option data-value="Niue">Niue</option>
+                                    <option data-value="Norfolk Island">Norfolk Island</option>
+                                    <option data-value="Northern Mariana Islands">Northern Mariana Islands</option>
+                                    <option data-value="Norway">Norway</option>
+                                    <option data-value="Oman">Oman</option>
+                                    <option data-value="Pakistan">Pakistan</option>
+                                    <option data-value="Palau">Palau</option>
+                                    <option data-value="Palestine, State of">Palestine, State of</option>
+                                    <option data-value="Panama">Panama</option>
+                                    <option data-value="Papua New Guinea">Papua New Guinea</option>
+                                    <option data-value="Paraguay">Paraguay</option>
+                                    <option data-value="Peru">Peru</option>
+                                    <option data-value="Philippines">Philippines</option>
+                                    <option data-value="Pitcairn">Pitcairn</option>
+                                    <option data-value="Poland">Poland</option>
+                                    <option data-value="Portugal">Portugal</option>
+                                    <option data-value="Puerto Rico">Puerto Rico</option>
+                                    <option data-value="Qatar">Qatar</option>
+                                    <option data-value="Réunion">Réunion</option>
+                                    <option data-value="Romania">Romania</option>
+                                    <option data-value="Russian Federation">Russian Federation</option>
+                                    <option data-value="Rwanda">Rwanda</option>
+                                    <option data-value="Saint Barthélemy">Saint Barthélemy</option>
+                                    <option data-value="Saint Helena, Ascension and Tristan da Cunha">Saint Helena, Ascension and Tristan da Cunha</option>
+                                    <option data-value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+                                    <option data-value="Saint Lucia">Saint Lucia</option>
+                                    <option data-value="Saint Martin (French part)">Saint Martin (French part)</option>
+                                    <option data-value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+                                    <option data-value="Saint Vincent and the Grenadines">Saint Vincent and the Grenadines</option>
+                                    <option data-value="Samoa">Samoa</option>
+                                    <option data-value="San Marino">San Marino</option>
+                                    <option data-value="Sao Tome and Principe">Sao Tome and Principe</option>
+                                    <option data-value="Saudi Arabia">Saudi Arabia</option>
+                                    <option data-value="Senegal">Senegal</option>
+                                    <option data-value="Serbia">Serbia</option>
+                                    <option data-value="Seychelles">Seychelles</option>
+                                    <option data-value="Sierra Leone">Sierra Leone</option>
+                                    <option data-value="Singapore">Singapore</option>
+                                    <option data-value="Sint Maarten (Dutch part)">Sint Maarten (Dutch part)</option>
+                                    <option data-value="Slovakia">Slovakia</option>
+                                    <option data-value="Slovenia">Slovenia</option>
+                                    <option data-value="Solomon Islands">Solomon Islands</option>
+                                    <option data-value="Somalia">Somalia</option>
+                                    <option data-value="South Africa">South Africa</option>
+                                    <option data-value="South Georgia and the South Sandwich Islands">South Georgia and the South Sandwich Islands</option>
+                                    <option data-value="South Sudan">South Sudan</option>
+                                    <option data-value="Spain">Spain</option>
+                                    <option data-value="Sri Lanka">Sri Lanka</option>
+                                    <option data-value="Sudan">Sudan</option>
+                                    <option data-value="Suriname">Suriname</option>
+                                    <option data-value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+                                    <option data-value="Swaziland">Swaziland</option>
+                                    <option data-value="Sweden">Sweden</option>
+                                    <option data-value="Switzerland">Switzerland</option>
+                                    <option data-value="Syrian Arab Republic">Syrian Arab Republic</option>
+                                    <option data-value="Taiwan">Taiwan</option>
+                                    <option data-value="Tajikistan">Tajikistan</option>
+                                    <option data-value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+                                    <option data-value="Thailand">Thailand</option>
+                                    <option data-value="Timor-Leste">Timor-Leste</option>
+                                    <option data-value="Togo">Togo</option>
+                                    <option data-value="Tokelau">Tokelau</option>
+                                    <option data-value="Tonga">Tonga</option>
+                                    <option data-value="Trinidad and Tobago">Trinidad and Tobago</option>
+                                    <option data-value="Tunisia">Tunisia</option>
+                                    <option data-value="Turkey">Turkey</option>
+                                    <option data-value="Turkmenistan">Turkmenistan</option>
+                                    <option data-value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+                                    <option data-value="Tuvalu">Tuvalu</option>
+                                    <option data-value="Uganda">Uganda</option>
+                                    <option data-value="Ukraine">Ukraine</option>
+                                    <option data-value="United Arab Emirates">United Arab Emirates</option>
+                                    <option data-value="United Kingdom">United Kingdom</option>
+                                    <option data-value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+                                    <option data-value="Uruguay">Uruguay</option>
+                                    <option data-value="Uzbekistan">Uzbekistan</option>
+                                    <option data-value="Vanuatu">Vanuatu</option>
+                                    <option data-value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+                                    <option data-value="Viet Nam">Viet Nam</option>
+                                    <option data-value="Virgin Islands, British">Virgin Islands, British</option>
+                                    <option data-value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+                                    <option data-value="Wallis and Futuna">Wallis and Futuna</option>
+                                    <option data-value="Western Sahara">Western Sahara</option>
+                                    <option data-value="Yemen">Yemen</option>
+                                    <option data-value="Zambia">Zambia</option>
+                                    <option data-value="Zimbabwe">Zimbabwe</option>
+                            </select>
+                              </div>
+                            <div class="form-group col-md-6">
+                                <label for="Industry">Industry</label>
+                                <select id="Industry" class="form-control  ">
+                                    <option selected>Choose...</option>
+                                    <option data-value="Consulting">Consulting</option>
+                                    <option data-value="Education">Education</option>
+                                    <option data-value="Entertainment">Entertainment</option>
+                                    <option data-value="Financial Services">Financial Services</option>
+                                    <option data-value="Government">Government</option>
+                                    <option data-value="Healthcare">Healthcare</option>
+                                    <option  data-value="Insurance">Insurance</option>
+                                    <option  data-value="Manufacturing">Manufacturing</option>
+                                    <option  data-value="Media and Communications">Media and Communications</option>
+                                    <option  data-value="Retail">Retail</option>
+                                    <option  data-value="Technology">Technology</option>
+                                    <option  data-value="Transportation">Transportation</option>
+                                    <option  data-value="Utilities">Utilities</option>
+                                    <option  data-value="Other">Other</option></select>
+                                </select>
+                              </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="Intrests">Tell us about your interest</label>
+                            <textarea class="form-control" id="Intrests" rows="3"></textarea>
+                          </div>
+                          <input type="submit" class="btn btn-primary"/>
+                    </form>
+                      <div class="d-none">
+                        <button  type="button" class="btn btn-secondary formid1" data-dismiss="modal">Close</button>
+                        <a  href="/assets/files/temp.pdf" download="temp.pdf"><button class="formid1">Download</button></a>
+
+                      </div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Modal end -->
+<!--one card done-->
+
+                   <div class="col-xl-4 col-lg-6 item branding development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project1.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a data-toggle="modal" data-target="#exampleModal" href="#" >Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item design saas template">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project2.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item web development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project3.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-xl-4 col-lg-6 item branding development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project1.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item design saas template">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project2.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item web development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project3.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-xl-4 col-lg-6 item branding development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project1.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item design saas template">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project2.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item web development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project3.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="col-xl-4 col-lg-6 item design development">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project5.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+                   <div class="col-xl-4 col-lg-6 item web saas">
+                       <div class="project-item">
+                           <img src="assets/images/projects/project6.jpg" alt="Project">
+                           <div class="project-content">
+                               <a href="project-details.html"><i class="fas fa-arrow-right"></i></a>
+                               <h3><a href="project-details.html">Web Design Research</a></h3>
+                           </div>
+                       </div>
+                   </div>
+
+
+
+
+                </div>
+            </div>
+        </section>
+        <!--====== Projects Section End ======-->
+
+{% endblock content %}

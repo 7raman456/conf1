@@ -1,0 +1,121 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+
+
+       <!--====== Contact Us Start ======-->
+        <section class="contact-page-section pt-130 rpt-100 pb-150 rpb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contact-content-area mr-xl-5 rmb-35 wow fadeInLeft delay-0-2s">
+                            <div class="section-title mb-15">
+                                <span class="sub-title">contact us</span>
+                                <h2>Have the early adoption advantage</h2>
+                            </div>
+                            <p>Let us work together to build next-generation AI and quantum capabilities for your organization.</p>
+                            <div class="row pt-25">
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <div class="contact-info-content">
+                                            <h5>Email Address</h5>
+                                            <span><a href="mailto:support@gmail.com">info@qpiai.tech</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <div class="contact-info-content">
+                                            <h5>Phone Number</h5>
+                                            <span><a href="callto:+0123456789">+012 (345) 67 89</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <div class="contact-info-content">
+                                            <h5>Website</h5>
+                                            <span><a href="creativedesign.net" target="_blank">www.qpiai.tech</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-12 col-md-6">
+                                    <div class="contact-info-item style-two">
+                                        <i class="fas fa-envelope-open"></i>
+                                        <div class="contact-info-content">
+                                            <h5>Location</h5>
+                                            <span>Bengaluru, India</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="contact-form-area wow fadeInRight delay-0-2s">
+                            <div class="section-title">
+                                <span class="sub-title">Get In Touch</span>
+                                <h2>Get Every Single Updates Message us</h2>
+                            </div>
+                            <form id="contact-page-form" class="contact-form-three pt-35"  >
+                                {% csrf_token %}
+                                <div class="row clearfix">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" id="name" name="name" class="form-control" placeholder="full name" required="">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" id="email" name="email" class="form-control" placeholder="Email Address" required="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-12">
+                                        <div class="form-group">
+                                            <input type="url" id="website" name="website" class="form-control" placeholder="website">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" rows="4" class="form-control" placeholder="message" required=""></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <div class="form-group mb-0">
+                                            <button class="theme-btn" id="submitcontactform" type="submit">send message <i class="fas fa-arrow-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <script>
+                                var form = document.getElementById("contact-page-form");
+                                function handleForm(event) { event.preventDefault(); }
+                                form.addEventListener('submit', handleForm);
+                            </script>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-page-map mt-80 wow fadeInUp delay-0-2s">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.8872293153977!2d77.61478492409815!3d13.042849487462684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1924f54947b9%3A0x711d7aec432c70be!2sQpiAI%20India%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1661078277847!5m2!1sen!2sin" height="605" style="border:0; width: 100%;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+        <!--====== Contact Us End ======-->
+        
+
+
+{% endblock content %}

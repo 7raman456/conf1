@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+      <!--====== Blog Details Start ======-->
+        <section class="blog-details-area pt-130 pb-160 rpt-100 rpb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="blog-details-content rmb-75">
+                            <div class="blog-standard-item">
+                                <!-- blog content start -->
+                                <h1>Quantum Error Correction</h1>
+                                <ul class="blog-meta" style="margin-top: 30px;">
+                                    <li><i class="far fa-calendar-alt"></i>March 30, 2020</li>
+                                </ul>
+                                <h2>Introduction</h2>
+                                <p>Quantum Computers have a lot of potential as the next generation of computing devices. Earlier this year Google demonstrated that their Quantum computers have achieved supremacy over existing classical computers on some very specific tasks. We are now in the NISQ (Noisy-Intermediate-Scale-Quantum-Computing) Era where the Qubits (The analog of bits) are imperfect and operations are noisy. One of the technological hurdles to overcome before we have full-fledged Quantum Computers is to detect and mitigate these noises from our computation and reverse them. That is the challenge of Error Correction. Surprisingly ideas from this field have cropped up in areas of physics like Condensed Matter Physics and Quantum Gravity! In this post, I will try to introduce some key concepts in Quantum Error-Correcting Codes..</p>
+                                <h3>Why the Noise?</h3>
+                                <p>There are mainly three sources of errors in quantum computation.</p>
+                                <p>
+                                    <li>1. Imperfect Quantum Gates</li>
+                                    <li>2. Imperfect Measurements</li>
+                                    <li>3. Interaction with the Environment( Decoherence )</li>
+                                </p>
+                                <p>These errors can be further classified as coherent or incoherent errors. Gate Errors and measurement errors can be reduced by improvements in Hardware.</p>
+                                <h3>Coherent Errors</h3>
+                                <p><img src="assets/images/blog/blog2/fig1.png"></p>
+                                <p style="color:#a5a5a5"><i style="color: #CD3298;">Figure 1.</i> Illustration of a coherent error on the Bloch sphere.</p>
+                                <p>Coherent errors do not destroy the coherence of a state. They introduce slight unitary perturbations to the ideal quantum states. These Errors accumulate through the course of the computation and can limit the depth of a Quantum Circuit. Pure states always live on the surface of the Bloch sphere and every coherent error maps pure states to pure states.</p>
+                                <p><img src="assets/images/blog/blog2/form1.png"></p>
+                                <p><a href="https://en.wikipedia.org/wiki/Density_matrix" style="color: #CD3298;">Density Matrix</a></p>
+                                <h3>Incoherent Errors</h3>
+                                <p>Incoherent errors destroy the coherence of a quantum state, i.e it maps pure states to mixed states. Mixed states are probabilistic mixtures of pure states. Mixed states can be represented by points living inside of the Bloch sphere.</p>
+                                <p><img src="assets/images/blog/blog2/form2.png"></p>
+                                <p>Incoherent errors occur due to the interaction of the qubits with the environment. This interaction results in leaking of information to the environment by a process called decoherence. It destroys the quantumness of our qubits. The more number of qubits there are, the more probable that decoherence occurs. This is the reason why we don’t observe weird superpositions in our daily life. Such incoherent errors can be mathematically modeled by the so-called Kraus -Sudarshan Maps.</p>
+                                <p><img src="assets/images/blog/blog2/form3.png"></p>
+                                <p><a href="https://en.wikipedia.org/wiki/Quantum_operation" style="color: #CD3298;">Quantum Operation</a></p>
+                                <h3>Why decoherence?</h3>
+                                <p>When a quantum system (e.g., the qubits on a quantum processor) is not perfectly isolated from its environment it generally co-evolves with the degrees of freedom in the environment(e,g., the surrounding gas molecules in the environment or stray magnetic fields). The implication is that even though the total time evolution of the system and environment is unitary, restriction to the system state generally is not. Superposition for subatomic particles is like balancing a coin, any small movement, vibration or even sound can affect the coin from being in a neutral state to collapsing on either heads or tails (0 or 1). Due to decoherence qubits are extremely fragile and their ability to stay in superposition and or entangle is severely jeopardized. Radiation, light, sound, vibrations, heat, magnetic fields or even the act of measuring a qubit are all examples of decoherence. Coherence Length is the time a qubit can survive its quantum properties. The world’s longest-lasting qubit holds the record of 39 minutes in a superposition state, it may seem short but that amount of time could calculate more than 200 million operations. Now the idea is to have a qubit system with a coherence length long enough to compute mathematical problems. Eventual decoherence is an inevitable phenomenon, even then we can prolong the coherence length by Quantum Error Correction.</p>
+                                <h3>Measurement Error Mitigation</h3>
+                                <p>The effect of noise that occurs throughout a computation will be quite complex in general but a simpler form of noise is that occurring during final measurement. At this point, the only job remaining in the circuit is to extract a bit string as an output. For an n qubit final measurement, this means extracting one of the possible 2ⁿ bit strings. As a simple model of the noise in this process, we can imagine that the measurement first selects one of these outputs in a perfect and noiseless manner, and then noise subsequently causes this perfect output to be randomly perturbed before it is returned.</p>
+                                <p>Given this model, it is very easy to determine exactly what the effects of measurement errors are. We can simply prepare each of the 2ⁿ possible basis states, immediately measure them, and see what probability exists for each outcome and invert them.</p>
+                                <h3>Quantum Error-Correcting Codes (QEC)</h3>
+                                <blockquote><p><em>“We have learned that it is possible to fight entanglement with entanglement.”<br>– John Preskill</em></p></blockquote>
+                                <p><img src="assets/images/blog/blog2/fig2.png"></p>
+                                <p style="color:#a5a5a5"><i style="color: #CD3298;">Figure 2.</i> The landscape of Fault Tolerance by Daniel Gottesman</p>
+                                <p>Even though these errors can be reduced by better and better Hardware capabilities, one cannot hope to completely eradicate them because to do so we would have to completely isolate our Quantum Computer from the outside world to shield from decoherence. Doing so would mean that we would not be able to read out the results of our computation, which will give us a perfectly good but useless computer. This is why we need to develop other clever ways of keeping the errors in check. There already exists a theory of error correcting codes for classical computers developed by Shannon,Hamming and others. The theory of Quantum Error Correcting codes borrows ideas from them for the Quantum Domain.</p>
+                                <h3>3 Qubit Repetition Code</h3>
+                                <p>This is the most trivial Quantum Error Correcting Code, but can illustrate the basic idea of error correction. Suppose Alice and Bob want to communicate a qubit of information. Unfortunately the transmission lines are faulty and will flip the qubits( i.e act by a X – operator ) with probability ‘p’. This situation is analogous to the case of decoherence.</p>
+                                <p><img src="assets/images/blog/blog2/form4.png"></p>
+                                <p>The data Bob receives will be corrupted with probability ‘p’. If Alice does a repetition of her data before transmission one of 8  scenarios can play out. The encoding is a spreading out of information about Alice’s qubit onto a highly entangled set of 3 Qubits. This is a typical feature of all error-correcting codes. The subspace spanned by this set of entangled basis states is called the codespace(C) of the Code. The encoding procedure can be visualized as follows.</p>
+                                <p><img src="assets/images/blog/blog2/fig3.png"></p>
+                                <p style="color:#a5a5a5"><i style="color: #CD3298;">Figure 3.</i> Visualization of the encoding procedure.</p>
+                                <p>The set of possible errors that can happen along with their probabilities,</p>
+                                <p><img src="assets/images/blog/blog2/form5.png"></p>
+                                <p>after receiving the qubits, Bob can detect the position of the error by measuring the Z⊗Z⊗I and I⊗Z⊗Z which are called the syndromes.</p>
+                                <p><img src="assets/images/blog/blog2/form6.png"></p>
+                                <p>If only a maximum of single bit flip occurs Bob can identify the position of the bit flip by measuring the eigenvalues of the syndromes. The group generated by the syndromes under composition is called the stabilizer of the code. All valid codewords will have eigenvalue 1 for all elements of this group. Bob can measure the syndromes using two ancilla qubits. First perform two CNOT’s from the first and second qubit to the first syndrome qubit, followed by two CNOT’s from the second and third qubit to the second syndrome qubit.</p>
+                                <p><img src="assets/images/blog/blog2/fig4.png"></p>
+                                <p style="color:#a5a5a5"><i style="color: #CD3298;">Figure 4.</i> Circuit diagram for the 3 – qubit repetition code</p>
+                                <p><img src="assets/images/blog/blog2/form7.png"></p>
+                                <p>this scheme can correct errors with a maximum of 1-bit flip. The success probability of this scheme</p>
+                                <p><img src="assets/images/blog/blog2/form8.png"></p>
+                                <p>is and fails with a probability,</p>
+                                <p><img src="assets/images/blog/blog2/form9.png"></p>
+                                <p>For low ’p’ this can work pretty well. Thus using this procedure Alice and Bob can reduce the chance of their data getting corrupted while transmission. But this is not a General Error Correcting code since it can only protect the data against bit-flip errors. In the quantum domain, there are other types of Errors like Z – error ( phase flip) and Y errors. A general Error-correcting code should be able to correct all of these errors simultaneously.</p>
+
+                                <!-- blog content end -->
+
+                                <!-- share links for blog start -->
+                                <div class="blog-footer d-flex flex-wrap align-items-center pt-25">
+                                    <div class="social mb-10">
+                                        <b>Share: </b>
+                                        <a target="_blank" href="https://www.facebook.com/share.php?u=https%3A%2F%2Fqpiai.tech%2Fquantum-error-correction%2F" data-link="https://www.facebook.com/share.php?u=https%3A%2F%2Fqpiai.tech%2Fquantum-error-correction%2F"><i class="fab fa-facebook-f"></i></a>
+                                        <a target="_blank" href="https://twitter.com/intent/tweet?text=Quantum+Error+Correction&amp;url=https%3A%2F%2Fqpiai.tech%2Fquantum-error-correction%2F" data-link="https://twitter.com/intent/tweet?text=Quantum+Error+Correction&amp;url=https%3A%2F%2Fqpiai.tech%2Fquantum-error-correction%2F"><i class="fab fa-twitter"></i></a>
+                                        <a target="_blank" href="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fqpiai.tech%2Fquantum-error-correction%2F" data-link="https://www.linkedin.com/cws/share?url=https%3A%2F%2Fqpiai.tech%2Fquantum-error-correction%2F"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                </div>
+                                <!-- share links for blog end -->
+                            </div>
+                            
+                            <div class="comment-item admin-comment p-40 text-white bg-blue mb-75 wow fadeInUp delay-0-2s align-items-center">
+                                <div class="author-image">
+                                    <img src="assets/images/blog/ashwanth_160.png" alt="Author">
+                                </div>
+                                <div class="comment-details">
+                                    <h3>Ashwanth Krishnan</h3>
+                                    <!-- <p>Expertise in building algorithms for computational problems in machine learning, optimization, and quantum-inspired computing.</p> -->
+                                    <div class="social mt-15">
+                                        <a href="https://www.linkedin.com/in/aswanth-krishnan-7b18211a/">LinkedIn | <i class="fab fa-linkedin-in"></i></a>
+                                        <i class="far fa-calendar-alt"></i>March 30, 2020
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-8">
+                        <div class="blog-sidebar">
+                            <div class="widget call-action-widget wow fadeInUp delay-0-2s">
+                                <h3>For More</h3>
+                                <span class="h2">Information</span>
+                                <div class="action-btn"><a href="contact" class="theme-btn">contact us <i class="fas fa-arrow-right"></i></a></div>
+                                <a class="number" href="mailto:info@qpiai.tech">info@qpiai.tech</a>
+                                <!-- <img class="action-man" src="assets/images/widgets/call-to-action.png" alt="Call To Action"> -->
+                                <img class="dots-shape slideUpDown" src="assets/images/shapes/white-dots-two.png" alt="Shape">
+                                <img class="circle-shape slideUpRight" src="assets/images/shapes/circle.png" alt="Shape">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--====== Blog Details End ======-->
+        {% endblock content %}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+     <!--====== Required meta tags ======-->
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet">
+    <!-- <link href="https://raw.githubusercontent.com/koehlersimon/bootstrap-videoplayer/master/favicon.png" rel="shortcut icon"> -->
+    <link rel="stylesheet" href="assets/css/rds.css">
+    <!--====== Title ======-->
+    <title>{% block title %}  {% endblock title %}</title>
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "dbmhevpu1v");
+    </script>
+    <!--====== Favicon Icon ======-->
+    <link rel="shortcut icon" href="assets/images/favic.png" type="image/x-icon">
+    <!--====== Google Fonts ======-->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <!--====== Font Awesome ======-->
+    <link rel="stylesheet" href="assets/css/fontawesome.5.9.0.min.css">
+    <!--====== Flaticon CSS ======-->
+    <link rel="stylesheet" href="assets/css/flaticon.css">
+    <!--====== Bootstrap css ======-->
+    <link rel="stylesheet" href="assets/css/bootstrap.4.5.3.min.css">
+    <!--====== Magnific Popup ======-->
+    <link rel="stylesheet" href="assets/css/magnific-popup.css">
+    <!--====== Slick Slider ======-->
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <!--====== Animate CSS ======-->
+    <link rel="stylesheet" href="assets/css/animate.min.css">
+    <!--====== Nice Select ======-->
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <!--====== Padding Margin ======-->
+    <link rel="stylesheet" href="assets/css/spacing.min.css">
+    <!--====== Menu css ======-->
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <!--====== Main css ======-->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!--====== Responsive css ======-->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+
+</head>
+<body>
+    <div class="page-wrapper">
+
+        <!-- Preloader -->
+        <div class="preloader"></div>
+
+            <!--====== Header Part Start ======-->
+            <header class="main-header">
+
+                <!--Header-Upper-->
+                <div class="header-upper">
+                    <div class="container clearfix">
+                        <div class="header-inner py-20">
+                            <div class="logo-outer">
+                                <div class="logo"><a href="/"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
+                            </div>
+
+                            <div class="nav-outer d-flex align-items-center  ml-lg-auto mr-50 clearfix ">
+                                <!-- Main Menu -->
+                                <nav class="main-menu navbar-expand-lg">
+                                    <div class="navbar-header">
+                                        <div class="logo-mobile"><a href="/"><img src="assets/images/logos/logo.png" alt="Logo"></a></div>
+                                        <!-- Toggle Button -->
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="main-menu">
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                            <span class="icon-bar"></span>
+                                        </button>
+                                    </div>
+
+                                    <div class="navbar-collapse collapse clearfix" id="main-menu">
+                                        <ul class="navigation clearfix">
+                                            <li><a href="/">Home</a></li>
+                                            <li><a href="about">about</a></li>
+                                            <li class="dropdown" ><a href="#">products</a>
+                                                <ul>
+                                                    
+                                                    <li style="width: 300px !important;"><a href="QpiAiPro">QpiAI Pro</a></li>
+                                                    <li><a href="QpiAiOpt">QpiAI Opt</a></li>
+                                                    <li><a href="QpiAiMl">QpiAI ML</a></li>
+                                                    <li><a href="QpiAiHardware">QpiAI Quantum Hardware</a></li>
+                                                    <li><a href="https://www.qpiai-explorer.tech/">QpiAI Explorer</a></li>
+
+                                                    <!-- replicate blog -->
+                                                </ul>
+                                            </li>
+                                            <li><a href="solutions">solutions</a></li>
+                                            <li class="dropdown" style="margin-right: 20px;"><a href="#">Resources</a>
+                                                <ul>
+                                                    <!-- <li><a href="whitepaper">whitepaper</a></li> -->
+                                                    <li><a href="blog">Blog</a></li>
+                                                    <li><a href="news">News</a></li>
+                                                    <li><a href="event">Events</a></li>
+                                                    <li><a href="carrers">Careers</a></li>
+                                                </ul>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+
+                                </nav>
+                                <!-- Main Menu End-->
+                            </div>
+
+                            <div class="menu-right d-none d-lg-flex align-items-center ml-2">
+
+                                <a href="contact" class="theme-btn style-two">Contact Us<i class="fas fa-arrow-right"></i></a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!--End Header Upper-->
+
+            </header>
+            <!--====== Header Part End ======-->
+
+    <div class="mt-20 mb-40">
+    {% block content %}
+
+    {% endblock content %}
+    </div>
+        <!--====== Footer Section Start ======-->
+            <footer class="footer-section bg-lighter rel z-1 mt-50">
+                <div class="container">
+                <div class="call-to-action bg-blue bgs-cover text-white rel z-1">
+                        <div class="row align-items-center">
+                            <div class="col-xl-7 col-lg-6">
+                                <div class="section-title mb-20">
+                                    <h2>Explore more with us</h2>
+                                    <p>Professional service for your software solutions</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="call-to-action-btns text-xl-right mb-20">
+                                    <a href="contact" class="theme-btn style-two rmb-15">Get Started <i class="fas fa-arrow-right"></i></a>
+                                    <a href="about" class="theme-btn style-three rmb-15">Learn More <i class="fas fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <img class="white-circle" src="assets/images/shapes/white-circle.png" alt="White Circle">
+                        <img class="white-dots slideUpRight" src="assets/images/shapes/white-dots.png" alt="shape">
+                        <img class="white-dots-circle slideLeftRight" src="assets/images/shapes/white-dots-circle.png" alt="shape">
+                    </div>
+
+                    <div class="row justify-content-between">
+                        <div class="col-xl-3 col-sm-6 col-7 col-small">
+                            <div class="">
+                                <div class="footer-logo mb-20">
+                                    <a href="#home"><img src="assets/images/logos/logo.png" alt="Logo"></a>
+                                </div>
+                                <p>Vertically integrated AI and Quantum Technologies for the future, delivered today.</p>
+                                <a href="about" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-4 col-md-8">
+                            <div class="footer-widget link-widget">
+                                <h4 class="footer-title">Quick Links</h4>
+                                <!-- <ul class="list-style-two two-column"> -->
+                                    <ul class="list-style-two two-column">
+                                    <li><a href="about">About</a></li>
+                                    <li><a href="solutions">Usecases</a></li>
+                                    <li><a href="QpiAiPro">QpiAI Pro</a></li>
+                                    <li><a href="QpiAiOpt">QpiAI Opt</a></li>
+                                    <li><a href="QpiAiMl">QpiAI ML</a></li>
+                                    <li><a href="QpiAiHardware">QpiAI Hardware</a></li>
+                                    <li><a href="blog">Blogs</a></li>
+                                    <li><a href="news">News</a></li>
+                                    <li><a href="event">Events</a></li>
+                                    <li><a href="carrers">Careers</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-4">
+                            <div class="footer-widget contact-widget">
+                                <h4 class="footer-title">Get in Touch</h4>
+                                <ul class="list-style-three">
+                                    <li><i class="fas fa-map-marker-alt"></i> WeWork Manyata<br> NXT Tower – 1
+                                        Embassy Manyata Business Park, Nagavara, Bengaluru, Karnataka 560045</li>
+                                    <li><i class="fas fa-envelope-open"></i> <a href="info@qpiai.tech">info@qpiai.tech</a></li>
+                                    <li><i class="fas fa-phone"></i> Call : <a href="callto:+91-9008892602">+91 90088 92602</a></li>
+                                </ul>
+                                <div class="social-style-one mt-25">
+                                    <a href="https://www.facebook.com/pages/category/Software-Company/Qpiai-Inc-110374803914745/"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://twitter.com/qpiai"><i class="fab fa-twitter"></i></a>
+                                    <a href="https://www.linkedin.com/company/qpiai/"><i class="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="copyright-area text-center">
+                        <p>© 2022 <a href="/">QpiAI<sup>TM</sup></a>.</a> All rights reserved</p>
+                    </div>
+                </div>
+
+
+            </footer>
+            <!--====== Footer Section End ======-->
+
+        </div>
+        <!--End pagewrapper-->
+
+
+        <!-- Scroll Top Button -->
+        <button class="scroll-top scroll-to-target" data-target="html"><span class="fa fa-angle-up"></span></button>
+
+
+        <!--====== Jquery ======-->
+        <script src="assets/js/jquery-3.6.0.min.js"></script>
+        <!--====== Bootstrap ======-->
+        <script src="assets/js/bootstrap.4.5.3.min.js"></script>
+        <!--====== Appear js ======-->
+        <script src="assets/js/appear.js"></script>
+        <!--====== WOW js ======-->
+        <script src="assets/js/wow.min.js"></script>
+        <!--====== Isotope ======-->
+        <script src="assets/js/isotope.pkgd.min.js"></script>
+        <!--====== Circle Progress ======-->
+        <script src="assets/js/circle-progress.min.js"></script>
+        <!--====== Image loaded ======-->
+        <script src="assets/js/imagesloaded.pkgd.min.js"></script>
+        <!--====== Nice Select ======-->
+        <script src="assets/js/jquery.nice-select.min.js"></script>
+        <!--====== Magnific ======-->
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <!--====== Slick Slider ======-->
+        <script src="assets/js/slick.min.js"></script>
+        <!--====== Main JS ======-->
+        <script src="assets/js/script.js"></script>
+        <!--== Lottie files ==-->
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+        <!-- typewriter JS -->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+        <!-- <script src="assets/js/typewriter/typewriter.js"></script> -->
+        <script>
+            var typed = new Typed(".auto-type",{
+                strings: ["AI Solutions","Quantum Software","Quantum Computers"],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true,
+                showCursor: true
+
+            });
+            $('span.typed-cursor')[0].style.color = "pink"
+        </script>
+
+        <script>
+            var typed = new Typed(".auto-type-pro",{
+                strings: ["Experiment across AI", "Invent across domains", "Collaborate across teams"],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true,
+                showCursor: true
+            });
+            $('span.typed-cursor')[0].style.color = "pink"
+        </script>
+
+        <script>
+            var typed = new Typed(".auto-type-opt",{
+                strings: ["solve intractable problems", "optimize your decisions", "scale to millions of variables"],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true,
+                showCursor: true
+            });
+            $('span.typed-cursor')[0].style.color = "pink"
+        </script>
+        <script>
+            var typed = new Typed(".auto-type-ML",{
+                strings: ["Analyse", "Build", "Scale"],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true,
+                showCursor: true
+            });
+            $('span.typed-cursor')[0].style.color = "pink"
+        </script>
+        <script>
+            var typed = new Typed(".auto-type-hardware",{
+                strings: ["Full-stack", "Scalable", "Hybrid classical-"],
+                typeSpeed: 60,
+                backSpeed: 60,
+                loop: true,
+                showCursor: true
+            });
+            $('span.typed-cursor')[0].style.color = "pink"
+        </script>
+        <!-- Extra JS -->
+        <script src="assets/js/contact.js"></script>
+        <script src="assets/js/paper.js"></script>
+        <script src="assets/js/newsletter.js"></script>
+        
+    
+</body>
+
+</html>

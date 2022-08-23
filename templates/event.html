@@ -1,0 +1,47 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock title %}
+
+
+{% block content %}
+<!--====== Blog Section Start ======-->
+<section class="blog-standard-area pt-170 pb-160 rpt-100 rpb-90">
+    <div class="container">
+        <!-- header of the event page start -->
+       <div class="row justify-content-center text-center">
+           <div class="col-xl-6 col-lg-8 col-md-10">
+               <div class="section-title mb-25">
+                    <span class="sub-title">Featured Event</span>
+                    <!-- <a href="#event"><h2 style="color: #f127bf;">Event name or complete title</h2></a> -->
+                </div>
+           </div>
+       </div>
+       <!-- header of the event page end -->
+        <div class="row align-items-center">
+            <!-- Event 1 -->
+            <div class="col-xl-3 col-md-6">
+                <div class="blog-item wow fadeInUp delay-0-2s">
+                  <div class="image">
+                      <img src="assets/images/event/nasscom-logo.png" alt="Blog">
+                  </div>
+                   <div class="blog-author">
+                       <h5><a href="https://nasscom.in/">Nasscom</a></h5>
+                   </div>
+                    <div class="blog-content">
+                        <ul class="blog-meta">
+                            <li><i class="far fa-calendar-alt"></i> <a href="eventdetails1">Year: 2021</a></li>
+                            <!-- <li><i class="far fa-comments"></i> <a href="#">Com (5)</a></li> -->
+                        </ul>
+                        <h4><a href="eventdetails1">QpiAI Pro Makes It to the NASSCOM Emerge 50 2021 League</a></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--====== Blog Section End ======-->
+
+{% endblock content %}
